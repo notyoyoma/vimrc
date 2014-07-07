@@ -1,8 +1,6 @@
 To install in a new system use the following steps:
 
+git clone https://github.com/notyoyoma/vimrc.git ~/.vim/
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cd ~/.vim
-git clone git@github.com:notyoyoma/vimrc.git
 echo "runtime vimrc" > ~/.vimrc
-vim
-	:PluginInstall
+vim -c 'PluginInstall'
