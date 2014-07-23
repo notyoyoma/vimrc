@@ -33,6 +33,7 @@ Plugin 'php.vim-html-enhanced'
 Plugin 'css3-syntax-plus'
 " Tabs / windows
 Plugin 'Tabmerge'
+nmap <C-W>m :Tabmerge<Space>
 " unfortunatley ack.vim requires installing ack in the local environment.
 " If you want to do that, follow these instructions:
 "   http://beyondgrep.com/install/
