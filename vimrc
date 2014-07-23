@@ -12,7 +12,7 @@ Plugin 'gmarik/vundle'
 
 
 " git
-Plugin 'fugitive.vim'
+Plugin 'tpope/vim-fugitive'
 " editing
 Plugin 'surround.vim'
 Plugin 'SirVer/ultisnips'
