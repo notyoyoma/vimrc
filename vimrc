@@ -14,28 +14,28 @@ Plugin 'gmarik/vundle'
 " git
 Plugin 'fugitive.vim'
 " editing
-Plugin 'Markdown'
 Plugin 'surround.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'restore_view.vim'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Bundle 'rstacruz/sparkup'
+
 " languages
 filetype plugin on
 Plugin 'jQuery'
 Plugin 'rails.vim'
 Plugin 'php.vim'
-" Plugin 'phpErrorMarker'
+
 Plugin 'php.vim-html-enhanced'
-" Plugin 'css-color-preview'
 Plugin 'css3-syntax-plus'
 " Tabs / windows
 Plugin 'Tabmerge'
 " unfortunatley ack.vim requires installing ack in the local environment.
 " If you want to do that, follow these instructions:
-" http://beyondgrep.com/install/
+"   http://beyondgrep.com/install/
 " Then uncomment these lines:
 " Bundle 'mileszs/ack.vim'
 " Plugin 'nerdtree-ack'
@@ -76,11 +76,10 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <ESC> :noh<cr>
+" Weird stuff happens when you just map a single <ESC>
+nmap <ESC><ESC> :noh<cr>
 
 " remap F1 key
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-
-"inoremap # X<BS>#
