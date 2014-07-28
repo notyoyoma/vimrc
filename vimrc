@@ -22,6 +22,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 Bundle 'rstacruz/sparkup'
+Plugin 'The-NERD-Commenter'
 
 " languages
 filetype plugin on
@@ -31,6 +32,8 @@ Plugin 'php.vim'
 
 Plugin 'php.vim-html-enhanced'
 Plugin 'css3-syntax-plus'
+au BufNewFile,BufRead *.md  setf markdown
+
 " Tabs / windows
 Plugin 'Tabmerge'
 nmap <C-W>m :Tabmerge<Space>
