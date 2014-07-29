@@ -49,6 +49,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 set guioptions-=r
 set guioptions-=L
+" If the local filesystem doesn't support utf8 arrows inside screen try
+" adding 'export LANG=en_US.utf8' to the .bashrc. If that doesn't work,
+" Uncomment this line:
+"let NERDTreeDirArrows = 0
+
 " - start nerdtree if vim is started without any arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
