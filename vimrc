@@ -15,14 +15,14 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
 " editing
 " only enable youcompleteme if the system can handle it
-Plugin 'Valloric/YouCompleteMe' "optional
+" Plugin 'Valloric/YouCompleteMe' "optional
 Plugin 'surround.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'restore_view.vim'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsExpandTrigger="<Leader><Leader>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 Bundle 'rstacruz/sparkup'
 Plugin 'The-NERD-Commenter'
 
@@ -83,7 +83,6 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase
 set smartcase
-set gdefault
 set incsearch
 set showmatch
 set hlsearch
