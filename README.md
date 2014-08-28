@@ -9,7 +9,7 @@ To install in a new system use the following steps:
 To setup YCM on UBUNTU only:
 
     cd ~/.vim/
-    git checkout -u ycm origin/ycm
+    git checkout -b ycm origin/ycm
     vim -c 'PluginInstall'
 
 
