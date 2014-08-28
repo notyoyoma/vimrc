@@ -15,5 +15,6 @@ To setup YCM on UBUNTU only:
 
 quit vim, then run this:
 
+    chmod 700 install-ycm.sh
     ./install-ycm.sh
 
