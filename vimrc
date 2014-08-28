@@ -15,7 +15,7 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
 " editing
 " only enable youcompleteme if the system can handle it
-" Plugin 'Valloric/YouCompleteMe' "optional
+Plugin 'Valloric/YouCompleteMe' "optional
 Plugin 'surround.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
