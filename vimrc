@@ -50,6 +50,7 @@ nmap <C-W>m :Tabmerge<Space>
 " Browsing
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+map <F2> :NERDTreeToggle<CR>
 set guioptions-=r
 set guioptions-=L
 " If the local filesystem doesn't support utf8 arrows inside screen try
