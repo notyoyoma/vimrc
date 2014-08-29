@@ -94,3 +94,18 @@ nmap <ESC><ESC> :noh<cr>
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+" line numbers in 'hybrid mode'
+function! NumberToggle()
+  if(&number == 0 && &relativenumber == 0)
+    set number
+  elseif(&number == 1 && &relativenumber == 0)
+    set relativenumber
+  elseif(&number == 1 && &relativenumber == 1)
+    set nonumber
+  elseif(&number == 0 && &relativenumber == 1)
+    set norelativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
