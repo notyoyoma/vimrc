@@ -39,6 +39,7 @@ au BufNewFile,BufRead *.md  setf markdown
 " Tabs / windows
 Plugin 'Tabmerge'
 nmap <C-W>m :Tabmerge<Space>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 " unfortunatley ack.vim requires installing ack in the local environment.
 " If you want to do that, follow these instructions:
 "   http://beyondgrep.com/install/
