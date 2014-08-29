@@ -8,12 +8,10 @@ call vundle#rc()
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
 Plugin 'gmarik/vundle'
-"Bundle 'Valloric/YouCompleteMe'
 
-
-" git
+" GIT
 Plugin 'tpope/vim-fugitive'
-" editing
+" EDITING
 " only enable youcompleteme if the system can handle it
 Plugin 'Valloric/YouCompleteMe' "optional
 Plugin 'surround.vim'
@@ -26,7 +24,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 Bundle 'rstacruz/sparkup'
 Plugin 'The-NERD-Commenter'
 
-" languages
+" LANGUAGES
 filetype plugin on
 Plugin 'jQuery'
 Plugin 'rails.vim'
@@ -36,10 +34,11 @@ Plugin 'php.vim-html-enhanced'
 Plugin 'css3-syntax-plus'
 au BufNewFile,BufRead *.md  setf markdown
 
-" Tabs / windows
+" tABS / WINDOWS
 Plugin 'Tabmerge'
 nmap <C-W>m :Tabmerge<Space>
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+" easy buffer switching
+nnoremap <F5> :buffers<CR>:buffer<Space>
 " unfortunatley ack.vim requires installing ack in the local environment.
 " If you want to do that, follow these instructions:
 "   http://beyondgrep.com/install/
@@ -53,7 +52,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 map <F2> :NERDTreeToggle<CR>
 set guioptions-=r
 set guioptions-=L
-" If the local filesystem doesn't support utf8 arrows inside screen try
+" If the font doesn't support utf8 arrows inside screen try
 " adding 'export LANG=en_US.utf8' to the .bashrc. If that doesn't work,
 " Uncomment this line:
 "let NERDTreeDirArrows = 0
@@ -91,12 +90,16 @@ set hlsearch
 " Weird stuff happens when you just map a single <ESC>
 nmap <ESC><ESC> :noh<cr>
 
-" remap F1 key
+" remap F1 key to prevent accidental presses
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" line numbers in 'hybrid mode'
+" function to toggle line number display
+" 0 press = no numbers
+" 1 press = normal numbers
+" 2 press = relative AND normal numbers
+" 3 press = just relative numbers
 function! NumberToggle()
   if(&number == 0 && &relativenumber == 0)
     set number
