@@ -9,8 +9,12 @@ CONTENTS                                            *PotionContents*
 ====================================================================
 Custom Shortcuts                                   *custom-shorcuts*
 
-  <F2> Toggle NerdTree
-  <F5> Easy buffer switching
+  <F2> .......................... Toggle NerdTree
+  <F5> .......................... Easy buffer switching
+  <C-n> ......................... Toggle Line Numbers
+  <C-W>m ........................ Init tabmerge
+  <Leader>? ..................... Open This help document
+  <ESC><ESC> .................... clear search highlighting
 
 ====================================================================
 Surround.vim                                              *surround*
