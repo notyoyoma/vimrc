@@ -113,3 +113,7 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" add custom help file
+:helptags ~/.vim/doc
+nmap <Leader>? :help custom-shorcuts<cr>
