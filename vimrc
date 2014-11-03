@@ -30,6 +30,9 @@ Plugin 'jQuery'
 Plugin 'rails.vim'
 Plugin 'php.vim'
 
+" MOVEMENT
+Plugin 'matchit.zip'
+
 " Plugin 'php.vim-html-enhanced' -- bad inent rule
 Plugin 'css3-syntax-plus'
 au BufNewFile,BufRead *.md  setf markdown
