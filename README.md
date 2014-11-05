@@ -2,7 +2,7 @@ To install in a new system use the following steps:
 
     git clone https://github.com/notyoyoma/vimrc.git ~/.vim/
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    echo "runtime vimrc" > ~/.vimrc
+    source install-deps.sh
     vim -c 'PluginInstall'
 
 
