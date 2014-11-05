@@ -9,7 +9,7 @@ call vundle#rc()
 " 'user/repository' format
 Plugin 'gmarik/vundle'
 
-" GIT
+" giT
 Plugin 'tpope/vim-fugitive'
 " EDITING
 " only enable youcompleteme if the system can handle it
@@ -65,6 +65,16 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 filetype plugin indent on
+
+" Searching
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'mileszs/ack.vim'
+Plugin 'inside/vim-grep-operator'
+let g:grep_operator = 'Ack'
+nmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
+vmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
+nmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
+vmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
 
 " Other settings
 set encoding=utf-8
