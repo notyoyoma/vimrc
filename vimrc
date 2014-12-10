@@ -40,6 +40,7 @@ au BufNewFile,BufRead *.md  setf markdown
 " tABS / WINDOWS
 Plugin 'Tabmerge'
 nmap <C-W>m :Tabmerge<Space>
+nmap <C-W>M <C-W>T
 " easy buffer switching
 nnoremap <F5> :buffers<CR>:buffer<Space>
 " unfortunatley ack.vim requires installing ack in the local environment.
