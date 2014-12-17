@@ -1,9 +1,9 @@
 # Install Ack
-mkdir ~/bin
-curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 ~/bin/ack
+mkdir -p ~/.local/bin
+curl http://beyondgrep.com/ack-2.14-single-file > ~/.local/bin/ack && chmod 0755 ~/.local/bin/ack
 
 # Setup new software
-echo "PATH=$PATH:~/bin/" > ~/.profile
-PATH=$PATH:~/bin/
+echo "PATH=$PATH:~/.local/bin/" > ~/.profile
+PATH=$PATH:~/.local/bin/
 echo "runtime vimrc" > ~/.vimrc
 
