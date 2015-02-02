@@ -29,6 +29,7 @@ filetype plugin on
 Plugin 'jQuery'
 Plugin 'rails.vim'
 Plugin 'php.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " MOVEMENT
 Plugin 'matchit.zip'
