@@ -13,6 +13,7 @@ Custom Shortcuts                                   *custom-shorcuts*
   <F5> .......................... Easy buffer switching
   <C-n> ......................... Toggle Line Numbers
   <C-W>m ........................ Init tabmerge
+  <C-W><F2> ..................... Rename Tab
   <Leader>? ..................... Open This help document
   <ESC><ESC> .................... clear search highlighting
 

@@ -38,10 +38,13 @@ Plugin 'matchit.zip'
 Plugin 'css3-syntax-plus'
 au BufNewFile,BufRead *.md  setf markdown
 
-" tABS / WINDOWS
+" TABS / WINDOWS
 Plugin 'Tabmerge'
+Plugin 'taboo.vim'
 nmap <C-W>m :Tabmerge<Space>
 nmap <C-W>M <C-W>T
+nmap <C-W><F2> :TabooRename 
+
 " easy buffer switching
 nnoremap <F5> :buffers<CR>:buffer<Space>
 " unfortunatley ack.vim requires installing ack in the local environment.

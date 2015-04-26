@@ -7,4 +7,5 @@ curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar >
 echo "PATH=$PATH:~/.local/bin/" > ~/.profile
 PATH=$PATH:~/.local/bin/
 echo "runtime vimrc" > ~/.vimrc
+echo "term xterm" > ~/.screenrc
 
