@@ -6,6 +6,7 @@ curl http://beyondgrep.com/ack-2.14-single-file > ~/.local/bin/ack && chmod 0755
 echo "PATH=$PATH:~/.local/bin/" > ~/.profile
 PATH=$PATH:~/.local/bin/
 echo "runtime vimrc" > ~/.vimrc
+echo "term xterm" > ~/.screenrc
 
 # UBUNTU only: setup tools to build YCM
 if ! dpkg-query -l | grep -q 'build-essential\s'; then

@@ -55,8 +55,11 @@ au BufNewFile,BufRead *.md  setf markdown
 
 " TABS / WINDOWS
 Plugin 'Tabmerge'
+Plugin 'taboo.vim'
 nmap <C-W>m :Tabmerge<Space>
 nmap <C-W>M <C-W>T
+nmap <C-W><F2> :TabooRename 
+
 " easy buffer switching
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
