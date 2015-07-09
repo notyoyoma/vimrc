@@ -36,3 +36,20 @@ Surround.vim                                              *surround*
   <div>Yo!*</div>           cst<p>      <p>Yo!</p>
   Hello w*orld!             ysiw)       Hello (world)!
       Hello w*orld!         yssB            {Hello world!}
+
+====================================================================
+Sparkup.vim                                                *sparkup*
+
+  Command: <C-E>
+
+  Input                     Output
+  #id.class                 <div class="class" id="id"></div>
+  span.class > small#id     <span class="class"><small id="id"></small></span>
+
+====================================================================
+NERDCommenter.vim                                    *NERDCommenter*
+
+  
+  <leader>cc Comment the lines
+  <leader>cs Comment the lines ``sexily''
+  <leader>cu Uncomment the lines
