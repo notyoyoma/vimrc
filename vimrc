@@ -67,10 +67,13 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp=1
+let g:ctrlp_extensions = ['line', 'dir']
 let g:ctrlp_working_path_mode = 'rw'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 map <F2> :NERDTreeToggle<CR>
+let g:NERDTreeChDirMode=2
 set guioptions-=r
 set guioptions-=L
 " If the font doesn't support utf8 arrows inside screen try
@@ -94,6 +97,7 @@ nmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
 vmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
 nmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
 vmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
+nmap <leader>gg :Ack 
 set t_ti= t_te=
 
 " Other settings
