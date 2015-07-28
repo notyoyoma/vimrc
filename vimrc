@@ -16,6 +16,8 @@ Plugin 'gmarik/vundle'
 
   " Awesome Git Integration
   Plugin 'tpope/vim-fugitive'
+  Plugin 'airblade/vim-gitgutter'
+  nmap <Leader>G :GitGutterToggle<CR>
 
 " /=============================\
 "           Editing
@@ -172,6 +174,22 @@ Plugin 'gmarik/vundle'
     " Weird stuff happens when you just map a single <ESC>
     nmap /<ESC> :noh<cr>
     nmap <ESC><ESC> :noh<cr>
+    
+" /=============================\
+"          General Editing
+" \=============================/
+
+  " Repeatable plugin actions
+  Plugin 'tpope/vim-repeat'
+
+  " Context-based tab settings
+  Plugin 'tpope/vim-sleuth'
+
+  " Fancy Statusline
+  Plugin 'bling/vim-airline'
+
+  " Editing Settings
+    let g:airline#extensions#tabline#enabled = 1
 
 " /=============================\
 "          Other Settings

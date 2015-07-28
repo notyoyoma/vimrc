@@ -53,3 +53,12 @@ NERDCommenter.vim                                    *NERDCommenter*
   <leader>cc Comment the lines
   <leader>cs Comment the lines ``sexily''
   <leader>cu Uncomment the lines
+
+====================================================================
+GitGutter                                                *GitGutter*
+
+  <Leader>G                 Toggle GitGutter display
+  <Leader>hs                Stage current hunk
+  <Leader>hr                Revert current hunk
+  ]c                        Next hunk
+  [c                        Previous hunk
