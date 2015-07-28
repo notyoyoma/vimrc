@@ -170,6 +170,7 @@ Plugin 'gmarik/vundle'
     set showmatch
     set hlsearch
     " Weird stuff happens when you just map a single <ESC>
+    nmap /<ESC> :noh<cr>
     nmap <ESC><ESC> :noh<cr>
 
 " /=============================\
@@ -199,6 +200,9 @@ Plugin 'gmarik/vundle'
     " add custom help file
     :helptags ~/.vim/doc
     nmap <Leader>? :help custom-shorcuts<cr>
+
+    " set vim's color-scheme
+    colorscheme desert
 
 " /=============================\
 "        Custom Functions
