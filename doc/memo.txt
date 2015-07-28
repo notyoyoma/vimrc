@@ -62,3 +62,8 @@ GitGutter                                                *GitGutter*
   <Leader>hr                Revert current hunk
   ]c                        Next hunk
   [c                        Previous hunk
+
+====================================================================
+EasyMotion                                              *EasyMotion*
+
+  <Leader><Leader>[motion]  Trigger easymotion

@@ -17,7 +17,11 @@ Plugin 'gmarik/vundle'
   " Awesome Git Integration
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
-  nmap <Leader>G :GitGutterToggle<CR>
+
+  " Git settings
+    nmap <Leader>G :GitGutterToggle<CR>
+
+
 
 " /=============================\
 "           Editing
@@ -61,6 +65,10 @@ Plugin 'gmarik/vundle'
   " php -- this sucks, I wish there was a better one
   Plugin 'php.vim'
 
+  " JS
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'maksimr/vim-jsbeautify'
+
   " Mustache
   Plugin 'mustache/vim-mustache-handlebars'
 
@@ -70,29 +78,15 @@ Plugin 'gmarik/vundle'
   " jQuery
   Plugin 'jQuery'
 
-  " Syntax Checker
-  "Plugin 'scrooloose/syntastic'
-    
-  " Language Settings
-    "au BufNewFile,BufRead *.md  setf markdown
-    "set statusline+=%#warningmsg#
-    "set statusline+=%{SyntasticStatuslineFlag()}
-    "set statusline+=%*
-    "let g:syntastic_always_populate_loc_list = 1
-    "let g:syntastic_auto_loc_list = 1
-    "let g:syntastic_check_on_open = 1
-    "let g:syntastic_check_on_wq = 0
-    "let g:syntastic_enable_signs = 1
-    "nmap ]e :lnext<cr>
-    "nmap [e :lprevious<cr>
-    "highlight SyntasticErrorSign guifg=white guibg=red
-
 " /=============================\
 "         Movement
 " \=============================/
 
   " Matchit makes html tag matching work with %
   Plugin 'matchit.zip'
+
+  " EasyMotion makes movements easier
+  Plugin 'EasyMotion'
 
 
 " /=============================\
@@ -172,7 +166,6 @@ Plugin 'gmarik/vundle'
     set showmatch
     set hlsearch
     " Weird stuff happens when you just map a single <ESC>
-    nmap /<ESC> :noh<cr>
     nmap <ESC><ESC> :noh<cr>
     
 " /=============================\
@@ -182,14 +175,34 @@ Plugin 'gmarik/vundle'
   " Repeatable plugin actions
   Plugin 'tpope/vim-repeat'
 
-  " Context-based tab settings
+  " Context-based whitespace/tab settings
   Plugin 'tpope/vim-sleuth'
 
   " Fancy Statusline
   Plugin 'bling/vim-airline'
 
+  " Color Plugin
+  Plugin 'flazz/vim-colorschemes'
+
   " Editing Settings
+    set laststatus=2
+    let g:airline#extensions#hunks#enabled=0
     let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#show_tabs = 1
+    let g:airline_powerline_fonts = 1
+    let g:bufferline_echo = 0
+
+  " Color Settings
+      colorscheme default
+      let g:airline_theme='badwolf'
+
+
+
+    " TODO figure out diff colors
+    highlight DiffAdd    cterm=NONE ctermfg=Black ctermbg=LightGreen
+    highlight DiffDelete cterm=NONE ctermfg=Black ctermbg=LightRed
+    highlight DiffChange cterm=NONE ctermfg=Black ctermbg=Yellow
+    highlight DiffText   cterm=NONE ctermfg=Black ctermbg=Yellow
 
 " /=============================\
 "          Other Settings
@@ -199,16 +212,16 @@ Plugin 'gmarik/vundle'
     set wildmenu
     set wildmode=list:longest
     set cursorline
-    " set ttyfast
-    set laststatus=2
+    set ttyfast
     set backspace=indent,eol,start
 
     " Indents
-    set tabstop=2
-    set shiftwidth=2
-    set softtabstop=2
-    set expandtab
-    set smartindent
+    " Disabling to try out vim-sleuth
+    " set tabstop=2
+    " set shiftwidth=2
+    " set softtabstop=2
+    " set expandtab
+    " set smartindent
 
     " remap F1 key to prevent accidental presses
     inoremap <F1> <ESC>
@@ -219,8 +232,6 @@ Plugin 'gmarik/vundle'
     :helptags ~/.vim/doc
     nmap <Leader>? :help custom-shorcuts<cr>
 
-    " set vim's color-scheme
-    colorscheme desert
 
 " /=============================\
 "        Custom Functions
