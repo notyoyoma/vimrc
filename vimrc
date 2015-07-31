@@ -175,9 +175,6 @@ Plugin 'gmarik/vundle'
   " Repeatable plugin actions
   Plugin 'tpope/vim-repeat'
 
-  " Context-based whitespace/tab settings
-  Plugin 'tpope/vim-sleuth'
-
   " Fancy Statusline
   Plugin 'bling/vim-airline'
 
@@ -216,12 +213,11 @@ Plugin 'gmarik/vundle'
     set backspace=indent,eol,start
 
     " Indents
-    " Disabling to try out vim-sleuth
-    " set tabstop=2
-    " set shiftwidth=2
-    " set softtabstop=2
-    " set expandtab
-    " set smartindent
+    set tabstop=2
+    set shiftwidth=2
+    set softtabstop=2
+    set expandtab
+    set smartindent
 
     " remap F1 key to prevent accidental presses
     inoremap <F1> <ESC>
