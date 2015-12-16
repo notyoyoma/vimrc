@@ -78,6 +78,9 @@ Plugin 'gmarik/vundle'
   " jQuery
   Plugin 'jQuery'
 
+  " Jade
+  Plugin 'jade.vim'
+
 " /=============================\
 "         Movement
 " \=============================/
@@ -158,13 +161,12 @@ Plugin 'gmarik/vundle'
     let g:ctrlp_extensions = ['line', 'dir']
     let g:ctrlp_working_path_mode = 'rw'
     set t_ti= t_te=
-    nnoremap / /\v
-    vnoremap / /\v
     set ignorecase
     set smartcase
     set incsearch
     set showmatch
     set hlsearch
+    " Map Double <ESC> to clear search highlights
     " Weird stuff happens when you just map a single <ESC>
     nmap <ESC><ESC> :noh<cr>
     
@@ -204,6 +206,12 @@ Plugin 'gmarik/vundle'
 " /=============================\
 "          Other Settings
 " \=============================/
+
+    " ||c coppies the entire file to the system cipboard
+    map <Leader><Leader>c gg"+yG``
+
+    " F3 toggles paste in insert mode
+    set pastetoggle=<F3>
 
     set encoding=utf-8
     set wildmenu
