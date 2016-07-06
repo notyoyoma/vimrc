@@ -10,6 +10,7 @@ CONTENTS                                            *PotionContents*
 Custom Shortcuts                                   *custom-shorcuts*
 
   <F2> .......................... Toggle NerdTree
+  <F3> .......................... Toggle Paste
   <F5> .......................... Easy buffer switching
   <C-n> ......................... Toggle Line Numbers
   <C-W>m ........................ Init tabmerge

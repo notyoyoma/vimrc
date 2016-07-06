@@ -69,6 +69,9 @@ Plugin 'gmarik/vundle'
   Plugin 'pangloss/vim-javascript'
   Plugin 'maksimr/vim-jsbeautify'
 
+  " TS
+  Plugin 'leafgarland/typescript-vim'
+
   " Mustache
   Plugin 'mustache/vim-mustache-handlebars'
 
@@ -183,6 +186,9 @@ Plugin 'gmarik/vundle'
   " Color Plugin
   Plugin 'flazz/vim-colorschemes'
 
+  " Indent Detect
+  "Plugin 'DetectIndent'
+
   " Editing Settings
     set laststatus=2
     let g:airline#extensions#hunks#enabled=0
@@ -203,14 +209,26 @@ Plugin 'gmarik/vundle'
     highlight DiffChange cterm=NONE ctermfg=Black ctermbg=Yellow
     highlight DiffText   cterm=NONE ctermfg=Black ctermbg=Yellow
 
+  " Indent Settings
+    "autocmd BufReadPost * :DetectIndent
+    "let g:detectindent_preferred_expandtab = 1
+
+" /=============================\
+"           Web Browsing
+" \=============================/
+
+  Plugin 'joshhartigan/vim-reddit'
+  Plugin 'ryanss/vim-hackernews'
+
 " /=============================\
 "          Other Settings
 " \=============================/
 
     " ||c coppies the entire file to the system cipboard
     map <Leader><Leader>c gg"+yG``
+    map <Leader><Leader>/ /[^\x00-\x7F]<cr>
 
-    " F3 toggles paste in insert mode
+    " F3 toggles paste
     set pastetoggle=<F3>
 
     set encoding=utf-8
