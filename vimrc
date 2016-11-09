@@ -27,6 +27,8 @@ Plugin 'gmarik/vundle'
 "           Editing
 " \=============================/
 
+  filetype plugin on
+
   " Text Completion
   Plugin 'Valloric/YouCompleteMe'
 
@@ -56,8 +58,6 @@ Plugin 'gmarik/vundle'
 " /=============================\
 "          Languages
 " \=============================/
-
-  filetype plugin on
 
   " rails
   Plugin 'rails.vim'
@@ -181,7 +181,8 @@ Plugin 'gmarik/vundle'
   Plugin 'tpope/vim-repeat'
 
   " Fancy Statusline
-  Plugin 'bling/vim-airline'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
 
   " Color Plugin
   Plugin 'flazz/vim-colorschemes'
@@ -217,8 +218,8 @@ Plugin 'gmarik/vundle'
 "           Web Browsing
 " \=============================/
 
-  Plugin 'joshhartigan/vim-reddit'
-  Plugin 'ryanss/vim-hackernews'
+  " Plugin 'joshhartigan/vim-reddit'
+  " Plugin 'ryanss/vim-hackernews'
 
 " /=============================\
 "          Other Settings
