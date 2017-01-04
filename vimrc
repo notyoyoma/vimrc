@@ -27,6 +27,7 @@ Plugin 'gmarik/vundle'
 "           Editing
 " \=============================/
 
+  filetype off
   filetype plugin on
 
   " Text Completion
@@ -132,6 +133,7 @@ Plugin 'gmarik/vundle'
     "autocmd StdinReadPre * let s:std_in=1
     "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+  filetype off
   filetype plugin indent on
 
 " /=============================\
