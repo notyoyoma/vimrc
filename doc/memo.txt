@@ -38,6 +38,15 @@ Surround.vim                                              *surround*
   Hello w*orld!             ysiw)       Hello (world)!
       Hello w*orld!         yssB            {Hello world!}
 
+  Custom Django Surround adverbs                   *django-surround*
+  v - Variable = "{{ * }}"
+  b - Block    = "{% block x     %} * {% endblock %}"
+  i - If       = "{% if x        %} * {% endif %}"
+  w - With     = "{% with x      %} * {% endwith %}"
+  f - For      = "{% for x       %} * {% endfor %}"
+  c - Comment  = "{% comment x   %} * {% endcomment %}"
+
+
 ====================================================================
 Sparkup.vim                                                *sparkup*
 
