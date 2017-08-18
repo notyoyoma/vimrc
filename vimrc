@@ -72,6 +72,16 @@ Plugin 'gmarik/vundle'
 		let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
 		let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
+		set statusline+=%#warningmsg#
+		set statusline+=%{SyntasticStatuslineFlag()}
+		set statusline+=%*
+
+		let g:syntastic_always_populate_loc_list = 1
+		let g:syntastic_auto_loc_list = 1
+		let g:syntastic_check_on_open = 1
+		let g:syntastic_check_on_wq = 0
+		let g:syntastic_json_checkers = ['jsonlint']
+
 " /=============================\
 "          Languages
 " \=============================/
@@ -82,6 +92,9 @@ Plugin 'gmarik/vundle'
   " JS
   Plugin 'pangloss/vim-javascript'
   Plugin 'maksimr/vim-jsbeautify'
+
+	" JSON
+	Plugin 'JSON.vim'
 
   " TS
   Plugin 'leafgarland/typescript-vim'
@@ -100,7 +113,6 @@ Plugin 'gmarik/vundle'
 
   " Python
 	Plugin 'Python-Syntax'
-	Plugin 'Python-Syntax-Folding'
 	Plugin 'davidhalter/jedi-vim'
 	Plugin 'virtualenv.vim'
 
@@ -134,13 +146,9 @@ Plugin 'gmarik/vundle'
   " Tabmerge merges other tabs into the current window
   Plugin 'Tabmerge'
 
-  " Taboo renames tabs
-  Plugin 'taboo.vim'
-
   " Tabs / Window settings
     nmap <C-W>m :Tabmerge<Space>
     nmap <C-W>M <C-W>T
-    nmap <C-W><F2> :TabooRename 
     " easy buffer switching
     nnoremap <F5> :buffers<CR>:buffer<Space>
 
@@ -187,6 +195,7 @@ Plugin 'gmarik/vundle'
   Plugin 'kien/ctrlp.vim'
 
   " Search Settings
+		let g:ack_default_options = " -s -H --nopager --nogroup --column"
     let g:grep_operator = 'Ack'
     nmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
     vmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
