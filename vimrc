@@ -48,11 +48,8 @@ Plugin 'gmarik/vundle'
   " Easy HTML typing
   Bundle 'rstacruz/sparkup'
 
-  " Easy Commenter
-  Plugin 'The-NERD-Commenter'
-
 	" Syntax Checker
-	Plugin 'Syntastic'
+	" Plugin 'Syntastic'
 
   " Editing Settings
   	let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -60,6 +57,7 @@ Plugin 'gmarik/vundle'
 		let g:ycm_seed_identifiers_with_syntax = 1 				" Completion for programming language's keyword
 		let g:ycm_complete_in_comments = 1  							" Completion in comments
 		let g:ycm_complete_in_strings = 1 								" Completion in string
+		let g:ycm_python_binary_path = '/Users/mnaselli/.pyenv/shims/python3'
     let g:UltiSnipsExpandTrigger="<Leader><Leader>"
     let g:UltiSnipsJumpForwardTrigger="<C-j>"
     let g:UltiSnipsJumpBackwardTrigger="<C-k>"
@@ -86,30 +84,11 @@ Plugin 'gmarik/vundle'
 "          Languages
 " \=============================/
 
-  " php -- this sucks, I wish there was a better one
-  Plugin 'php.vim'
-
-  " JS
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'maksimr/vim-jsbeautify'
-
 	" JSON
 	Plugin 'JSON.vim'
 
-  " TS
-  Plugin 'leafgarland/typescript-vim'
-
-  " Mustache
-  Plugin 'mustache/vim-mustache-handlebars'
-
-  " Better CSS Syntax
-  Plugin 'css3-syntax-plus'
-
-  " jQuery
-  Plugin 'jQuery'
-
-  " Jade
-  Plugin 'jade.vim'
+	" Vue
+	Plugin 'posva/vim-vue'
 
   " Python
 	Plugin 'Python-Syntax'
@@ -119,9 +98,6 @@ Plugin 'gmarik/vundle'
 " /=============================\
 "          Frameworks
 " \=============================/
-
-  " rails
-  Plugin 'rails.vim'
 
 	" django
 	Plugin 'django.vim'
@@ -151,6 +127,12 @@ Plugin 'gmarik/vundle'
     nmap <C-W>M <C-W>T
     " easy buffer switching
     nnoremap <F5> :buffers<CR>:buffer<Space>
+	
+	Plugin 'gu-fan/simpleterm.vim'
+
+	" Terminal keys
+	  nmap <C-T> :Sshow<CR>
+
 
 " /=============================\
 "          File Browsing
