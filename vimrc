@@ -20,8 +20,8 @@ Plugin 'gmarik/vundle'
 
   " Git settings
     nmap <Leader>G :GitGutterToggle<CR>
-		nmap <Leader>hr <Plug>GitGutterUndoHunk
-		nmap <Leader>ha <Plug>GitGutterStageHunk
+    nmap <Leader>hr <Plug>GitGutterUndoHunk
+    nmap <Leader>ha <Plug>GitGutterStageHunk
 
 
 
@@ -50,62 +50,62 @@ Plugin 'gmarik/vundle'
   " Easy HTML typing
   Bundle 'rstacruz/sparkup'
 
-	" Syntax Checker
-	" Plugin 'Syntastic'
+  " Syntax Checker
+  " Plugin 'Syntastic'
 
   " Editing Settings
-  	let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
-		let g:ycm_use_ultisnips_completer = 1 						" Default 1, just ensure
-		let g:ycm_seed_identifiers_with_syntax = 1 				" Completion for programming language's keyword
-		let g:ycm_complete_in_comments = 1  							" Completion in comments
-		let g:ycm_complete_in_strings = 1 								" Completion in string
-		let g:ycm_python_binary_path = '/Users/mnaselli/.pyenv/shims/python3'
+    let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+    let g:ycm_use_ultisnips_completer = 1             " Default 1, just ensure
+    let g:ycm_seed_identifiers_with_syntax = 1         " Completion for programming language's keyword
+    let g:ycm_complete_in_comments = 1                " Completion in comments
+    let g:ycm_complete_in_strings = 1                 " Completion in string
+    let g:ycm_python_binary_path = '/Users/mnaselli/.pyenv/shims/python3'
     let g:UltiSnipsExpandTrigger="<Leader><Leader>"
     let g:UltiSnipsJumpForwardTrigger="<C-j>"
     let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-		let b:surround_{char2nr("v")} = "{{ \r }}"
-		let b:surround_{char2nr("{")} = "{{ \r }}"
-		let b:surround_{char2nr("%")} = "{% \r %}"
-		let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
-		let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
-		let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
-		let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
-		let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
+    let b:surround_{char2nr("v")} = "{{ \r }}"
+    let b:surround_{char2nr("{")} = "{{ \r }}"
+    let b:surround_{char2nr("%")} = "{% \r %}"
+    let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+    let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+    let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+    let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+    let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
-		set statusline+=%#warningmsg#
-		set statusline+=%{SyntasticStatuslineFlag()}
-		set statusline+=%*
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-		let g:syntastic_always_populate_loc_list = 1
-		let g:syntastic_auto_loc_list = 1
-		let g:syntastic_check_on_open = 1
-		let g:syntastic_check_on_wq = 0
-		let g:syntastic_json_checkers = ['jsonlint']
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_json_checkers = ['jsonlint']
 
 " /=============================\
 "          Languages
 " \=============================/
 
-	" JSON
-	Plugin 'JSON.vim'
+  " JSON
+  Plugin 'JSON.vim'
 
-	" Vue
-	Plugin 'posva/vim-vue'
+  " Vue
+  Plugin 'posva/vim-vue'
 
   " Python
-	Plugin 'Python-Syntax'
-	Plugin 'davidhalter/jedi-vim'
-	Plugin 'virtualenv.vim'
+  Plugin 'Python-Syntax'
+  Plugin 'davidhalter/jedi-vim'
+  Plugin 'virtualenv.vim'
 
 " /=============================\
 "          Frameworks
 " \=============================/
 
-	" django
-	Plugin 'django.vim'
-	Plugin 'jmcomets/vim-pony'
+  " django
+  Plugin 'django.vim'
+  Plugin 'jmcomets/vim-pony'
 
-	
+  
 " /=============================\
 "         Movement
 " \=============================/
@@ -129,11 +129,11 @@ Plugin 'gmarik/vundle'
     nmap <C-W>M <C-W>T
     " easy buffer switching
     nnoremap <F5> :buffers<CR>:buffer<Space>
-	
-	Plugin 'gu-fan/simpleterm.vim'
+  
+  Plugin 'gu-fan/simpleterm.vim'
 
-	" Terminal keys
-	  nmap <C-T> :Sshow<CR>
+  " Terminal keys
+    nmap <C-T> :Sshow<CR>
 
 
 " /=============================\
@@ -179,7 +179,7 @@ Plugin 'gmarik/vundle'
   Plugin 'kien/ctrlp.vim'
 
   " Search Settings
-		let g:ack_default_options = " -s -H --nopager --nogroup --column"
+    let g:ack_default_options = " -s -H --nopager --nogroup --column"
     let g:grep_operator = 'Ack'
     nmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
     vmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
@@ -267,16 +267,16 @@ Plugin 'gmarik/vundle'
 
     " Indents
 
-		Plugin 'DetectIndent'
-		set expandtab
-		set smartindent
+    Plugin 'DetectIndent'
+    set expandtab
+    set smartindent
     set tabstop=2
     set shiftwidth=2
     set softtabstop=2
     set expandtab
     set smartindent
-		let g:detectindent_preferred_expandtab=2
-		let g:detectindent_preferred_indent=2
+    let g:detectindent_preferred_expandtab=2
+    let g:detectindent_preferred_indent=2
 
     " remap F1 key to prevent accidental presses
     inoremap <F1> <ESC>
