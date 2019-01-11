@@ -20,6 +20,8 @@ Plugin 'gmarik/vundle'
 
   " Git settings
     nmap <Leader>G :GitGutterToggle<CR>
+		nmap <Leader>hr <Plug>GitGutterUndoHunk
+		nmap <Leader>ha <Plug>GitGutterStageHunk
 
 
 
