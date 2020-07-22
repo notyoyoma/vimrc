@@ -33,7 +33,11 @@ Plugin 'gmarik/vundle'
   filetype plugin on
 
   " Text Completion
-  Plugin 'Valloric/YouCompleteMe'
+  " Plugin 'Valloric/YouCompleteMe'
+  " Plugin 'neoclide/coc.nvim'
+
+  " Start page
+  Plugin 'mhinz/vim-startify'
 
   " Snippets for YCM
   Plugin 'SirVer/ultisnips'
@@ -92,10 +96,15 @@ Plugin 'gmarik/vundle'
   " Vue
   Plugin 'posva/vim-vue'
 
+  " PHP
+  Plugin 'StanAngeloff/php.vim'
+  Plugin 'rayburgemeestre/phpfolding.vim'
+  Plugin '2072/PHP-Indenting-for-VIm'
+
   " Python
-  Plugin 'Python-Syntax'
-  Plugin 'davidhalter/jedi-vim'
-  Plugin 'virtualenv.vim'
+  " Plugin 'Python-Syntax'
+  " Plugin 'davidhalter/jedi-vim'
+  " Plugin 'virtualenv.vim'
 
 " /=============================\
 "          Frameworks
@@ -210,9 +219,6 @@ Plugin 'gmarik/vundle'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
 
-  " Color Plugin
-  Plugin 'flazz/vim-colorschemes'
-
   " Indent Detect
   "Plugin 'DetectIndent'
 
@@ -225,8 +231,8 @@ Plugin 'gmarik/vundle'
     let g:bufferline_echo = 0
 
   " Color Settings
-      colorscheme default
-      let g:airline_theme='badwolf'
+    let g:airline_theme='badwolf'
+    colorscheme default
 
 
 
@@ -252,7 +258,8 @@ Plugin 'gmarik/vundle'
 " \=============================/
 
     " ||c coppies the entire file to the system cipboard
-    map <Leader><Leader>c gg"+yG``
+    " map <Leader><Leader>c gg"+yG``
+    " ||/ search for non ascii codes
     map <Leader><Leader>/ /[^\x00-\x7F]<cr>
 
     " F3 toggles paste
@@ -309,6 +316,17 @@ Plugin 'gmarik/vundle'
       endif
     endfunc
     nnoremap <C-n> :call NumberToggle()<cr>
+
+    " :read !ruby -e 'puts Random.rand(10)'
+    "
+    " WSL yank support
+    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+    if executable(s:clip)
+      augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+      augroup END
+    endif
 
 " /=============================\
 "           End of file
