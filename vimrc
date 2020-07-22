@@ -77,14 +77,14 @@ Plugin 'gmarik/vundle'
     let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
     set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
+    " set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
 
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_json_checkers = ['jsonlint']
+    " let g:syntastic_always_populate_loc_list = 1
+    " let g:syntastic_auto_loc_list = 1
+    " let g:syntastic_check_on_open = 1
+    " let g:syntastic_check_on_wq = 0
+    " let g:syntastic_json_checkers = ['jsonlint']
 
 " /=============================\
 "          Languages
@@ -158,6 +158,7 @@ Plugin 'gmarik/vundle'
   " Browsing Settings
     map <F2> :NERDTreeToggle<CR>
     let g:NERDTreeChDirMode=2
+    let g:NERDTreeNodeDelimiter = "\u00a0"
     set guioptions-=r
     set guioptions-=L
 
@@ -293,6 +294,12 @@ Plugin 'gmarik/vundle'
     " add custom help file
     :helptags ~/.vim/doc
     nmap <Leader>? :help custom-shorcuts<cr>
+
+
+" /=============================\
+"        Custom Mappings
+" \=============================/
+  :map <C-w>t :tabnew <cfile><cr>
 
 
 " /=============================\
